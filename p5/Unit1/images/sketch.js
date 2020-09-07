@@ -7,9 +7,9 @@ imageMode(CENTER);
 img1 = loadImage("assets/1.jpg");
 img2 = loadImage("assets/2.jpg");
 img3 = loadImage("assets/3.jpg");
-}
 
-function draw() {
+
+function draw()
   background(100);
   image(img1, width/2, height/2, 200, 200);
   image(img2, width/2, height/2-210, 200, 200);
