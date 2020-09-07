@@ -15,7 +15,11 @@ function draw() {
   background(100);
 
   textFont(f);
-  textSize(60);
-  text("Hello", width / 2, height / 2)
+  textSize(80);
+  text("Everything", width / 2, height / 2)
+
+  textFont(f1);
+  textSize(160);
+  text("Happens for a reason", width / 2, height / 2)
 
 }
