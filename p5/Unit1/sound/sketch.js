@@ -6,8 +6,16 @@ function preload(){
 
 function setup() {
   createCanvas(800, 800);
-}
 song1.loop()
+}
 function draw() {
+background(100);
+}
 
+function mouseReleased(){
+  if (song1.isPlaying(){
+    song1.paused();
+  }else{
+    song1.loop();
+  }
 }
