@@ -4,7 +4,7 @@ function setup() {
 
 function draw() {
   fill(random(255),random(255),random(255),random(255));
-rect(mouseX,mouseY,random(50,150);random(50,150));
+rect(mouseX,mouseY,random(50,150);random(50,150);
 }
 
 function mouseReleased(){
