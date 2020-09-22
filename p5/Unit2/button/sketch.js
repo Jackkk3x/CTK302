@@ -28,7 +28,8 @@ function draw() {
 
 function mouseReleased() {
   myState++;
-  if (myState > 1) {
+  if((mouseX > 10 && (mouseX <60) && (mouseY > 10) && (mouseY < 35))
+  if (myState > 2) {
     myState = 0;
   }
 }
