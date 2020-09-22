@@ -7,9 +7,9 @@ function setup() {
 
   createCanvas(500, 500);
 
-  textSize(32)
-  textAlign(CENTER)
-  rectmode(CENTER)
+  textSize(32);
+  textAlign(CENTER);
+  rectMode(CENTER);
 }
 
 
