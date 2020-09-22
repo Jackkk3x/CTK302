@@ -1,19 +1,25 @@
-let timer = 0 ; 
-let state = 0 ;  
-function setup() { 
-  createCanvas(500, 500); 
-}  
-function draw() {    switch(state){   case 0: 
-  background('red') ; 
- text("why did the chicken cross the road",250,250, 350,200) ; 
-   timer = timer + 1 ; 
-    if (timer > 5*60) { 
-      state = 1 ; 
-       timer = 0 ; 
-      }   
+function setup() {
+  createCanvas(500,500)
+  textAlign(CENTER)
+  textSize(32);
+}
+
+function draw() {
+  switch(state){
+    case 0:
+    background('purple');
+  text("why did the baby\ncross the road?" , 250,250);
+  case 1:
+  background('orange');
+  text("because it was|n stapled to the chicken" , 250,250)
+  }
 
 
+}
 
-        break ;  
-   case 1:     background('blue') ; 
-   text("to get to the other side", 250, 250) ;     break ;    }  } 
+function mouseReleased(){
+  state++;
+  if(state > 1){
+    state = 0 ;
+  }
+}
