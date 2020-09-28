@@ -16,3 +16,4 @@ function draw() {
         x = random(-500, -200);
       }
   }
+}
