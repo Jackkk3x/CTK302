@@ -5,8 +5,7 @@ function setup() {
 }
 
 function draw() {
-  switch (state) {
-    case 0:
+
       background(100);
       rect(x, 250, 50, 50);
 
@@ -16,4 +15,3 @@ function draw() {
         x = random(-500, -200);
       }
   }
-}
