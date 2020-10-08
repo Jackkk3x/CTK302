@@ -13,6 +13,7 @@ function setup() {
   createCanvas(500, 500)
   song1.loop()
   textAlign: (CENTER);
+  textSize: (32);
 }
 
 function draw() {
