@@ -45,15 +45,16 @@ function draw() {
 }
 
 function mouseReleased() {
+    if (song1.isPlaying()) {
+      song1.paused();
+    } else {
+      song1.loop();
+    }
   myState++;
   if ((mouseX > 10) && (mouseX < 60) && (mouseY > 10) && (mouseY < 35))
     if (myState > 2) {
       myState = 0;
-    } {
-      if (song1.isPlaying()) {
-      
-      } else {
-        song1.loop();
-      }
+    }
+
     }
 }
