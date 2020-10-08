@@ -1,31 +1,34 @@
 let myState = 0;
-let song1;
 var x = 0;
+var song1;
+
 
 function preload(){
-  song1 = loadSound('assets/)
+    song1 = loadSound("assets/HD010(140).mp3");
+  }
+
 }
 
 function setup() {
   createCanvas(500, 500)
-
+  song1.loop()
 }
 
 function draw() {
   switch (myState) {
     case 0:
       background('orange');
-      text("case 0", 250, 250);
+      text("Not everything is as it seems", 250, 250);
       break;
 
     case 1:
       background('green');
-      text("case1", 250, 250);
+      text("Sometimes you have to look inbetween", 250, 250);
       break;
 
     case 2:
-      background('yellow');
-      text("", 250, 250);
+      background('blue');
+      text("To understand what you can't see", 250, 250);
       break;
 
   }
