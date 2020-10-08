@@ -3,17 +3,19 @@ var x = 0;
 var song1;
 
 
-function preload(){
-    song1 = loadSound("assets/HD010(140).mp3");
-  }
+function preload() {
+  song1 = loadSound("assets/HD010(140).mp3");
+}
 
 
 
 function setup() {
   createCanvas(500, 500)
   song1.loop()
-  textAlign: (CENTER);
-  textSize: (32);
+
+  textAlign(CENTER);
+  textSize(32);
+
 }
 
 function draw() {
@@ -40,15 +42,14 @@ function draw() {
 
 function mouseReleased() {
   myState++;
-  if ((mouseX > 10 )&& (mouseX < 60) && (mouseY > 10) && (mouseY < 35))
-  if (myState > 2) {
+  if ((mouseX > 10) && (mouseX < 60) && (mouseY > 10) && (mouseY < 35))
+    if (myState > 2) {
       myState = 0;
-    }
-   {
+    } {
       if (song1.isPlaying()) {
         song1.paused();
       } else {
         song1.loop();
       }
-  }
+    }
 }
