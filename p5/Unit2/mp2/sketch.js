@@ -7,11 +7,12 @@ function preload(){
     song1 = loadSound("assets/HD010(140).mp3");
   }
 
-}
+
 
 function setup() {
   createCanvas(500, 500)
   song1.loop()
+  textAlign: (CENTER);
 }
 
 function draw() {
