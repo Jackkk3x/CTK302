@@ -1,4 +1,5 @@
 let myState = 0;
+let numberOfTouches;
 var x = 0;
 var song1;
 
@@ -19,6 +20,9 @@ function setup() {
 }
 
 function draw() {
+  numberOfTouches = touches.length;
+  text(numberOfTouches + ' touches', 5, 10);
+  
   switch (myState) {
     case 0:
       background('orange');
