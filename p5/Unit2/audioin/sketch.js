@@ -1,6 +1,6 @@
 var mic;
 var vol;
-var c = 'green' ;
+var c = 'green';
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -17,12 +17,12 @@ function draw() {
   // get the sound input
   vol = (mic.getLevel()).toFixed(2); // returned level is between 0 and 1
 
-// check how loud the input is
+  // check how loud the input is
   if (vol > .001) { // if the volume is LOUD?
     // do something
-    x + x =1;
-    rect(x, 10, 10, vol*200);
-  //c = color(random(255), random(255), random(255)) ; // here I'm setting the background to a random color
+    x + x = 1;
+    rect(x, 10, 10, vol * 200);
+    //c = color(random(255), random(255), random(255)) ; // here I'm setting the background to a random color
   }
 
   // extra stuff for debugging
