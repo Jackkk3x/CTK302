@@ -1,4 +1,5 @@
 let state = 0;
+let timer = 0;
 function setup() {
   createCanvas(800, 800);
   ellipseMode(CENTER);
@@ -44,6 +45,12 @@ fill('grey') ;
 ellipse(width/2,height/2+170,150,150);
 
 break;
+}
+timer = timer + 1 ;
+if(timer > 100){
+  timer = 0;
+  state++;
+  if(state > 2) state = 0
 }
 }
 function mouseReleased(){
