@@ -5,11 +5,12 @@ let myCar3;
 
 function setup() {
   createCanvas(500, 500);
-  myCar1= new Car();
+  myCar1 = new Car();
   myCar2 = new Car();
   myCar3 = new Car();
+
+rectMode(CENTER);
 }
-rectMode(CENTER)
 
 function draw() {
   background('grey')
@@ -36,8 +37,8 @@ this.w = random(40,60);
     display(){
       fill(this.r,this.g,this.b);
     rect(this.pos.x,this.pos.y,this.w,25);
-    ellipse()(this.pos.x-20,this.pos.y+15,15);
-        ellipse()(this.pos.x+20,this.pos.y+15,15);
+    ellipse(this.pos.x-20,this.pos.y+15,15);
+        ellipse(this.pos.x+20,this.pos.y+15,15);
 
   }
 move(){
