@@ -27,7 +27,7 @@ this.vel = createVector(random(-5,5), random(-5,5));
 
     //methods
     display(){
-    rect(this.x,100,50,25);
+    rect(this.pos.x,100,50,25);
   }
 move(){
   this.pos.add(this.vel);
@@ -35,7 +35,7 @@ move(){
   if (this.pos.x < 0) this.pos.x = width
   if(this.pos.y>height)this.pos.y = 0;
   if(this.pos.y<0) this.pos.y =height;
-  
+
 }
 
 }
