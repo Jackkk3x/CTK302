@@ -4,17 +4,19 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // Spawn 20 objects
-
+for(let i = 0;i < 20; i++){
+cars.push(new Car());
 
 }
-
+}
 
 function draw() {
   background(100);
 
   // display and move 20 objects
-
-
+for(let i = 0;i < 20; i++){
+cars[i].display();
+cars[i].move();
 }
 
 
