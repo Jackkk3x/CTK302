@@ -18,7 +18,7 @@ for(let i = 0;i < 20; i++){
 cars[i].display();
 cars[i].move();
 }
-
+}
 
 
 // Car class
