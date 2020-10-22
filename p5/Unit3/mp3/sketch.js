@@ -2,8 +2,12 @@ let cars = [];
 let f1, f2, f3;
 let bg;
 let fonts= [];
+let maxCars= 5;
+let frogPos;
 function setup() {
   createCanvas(windowWidth, windowHeight);
+
+frogPos= createVector(width/2, height/-80);
 
 f1= loadFont("assets/KGChasingCars.ttf");
 f2= loadFont("assets/rock.ttf");
@@ -13,7 +17,7 @@ bg= loadImage("assets/fallPic.jpg");
 fonts=[ f1,f2,f3];
 
   // Spawn 20 objects
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < maxCars; i++) {
     cars.push(new Car());
 
   }
@@ -27,7 +31,23 @@ image(bg,0,0,width,height);
     cars[i].display();
     cars[i].move();
   }
+  fill('green');
+  ellipse(frogPos.x,frogPos.y, 50,50);
+  checkforKeys();
 }
+
+function checkForKeys() {
+
+  if (keyIsDown(LEFT_ARROW)) frogPos.x -= 5;
+
+ if (keyIsDown(RIGHT_ARROW)) frogPos.x += 5;
+
+if (keyIsDown(UP_ARROW)) frogPos.y -= 5;
+
+ if (keyIsDown(DOWN_ARROW)) frogPos.y += 5;
+
+
+
 
 
 // Car class
