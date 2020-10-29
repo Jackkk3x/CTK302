@@ -29,10 +29,11 @@ function draw() {
       text("state3", 250, 250);
   }
 }
-
 function mouseReleased() {
-  state++ ;
-  if (state > 3) {
-    state = 0;
-  }
+  state++;
+  song1.pause();
+  song2.pause();
+  song3.pause();
+  if (state > 5) state = 0;
+
 }
