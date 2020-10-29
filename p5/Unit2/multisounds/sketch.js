@@ -1,47 +1,38 @@
-var mic;
-var vol;
+let state = 0;
 
-let x = 0;
-let velocity = 7;
 
 function setup() {
   createCanvas(500, 500);
-  textSize(24);
-  textAlign(CENTER);
-  noStroke();
-
-  mic = new p5.AudioIn();
-  mic.start();
 }
 
 function draw() {
 
-  background("pink");
 
-  vol = (mic.getLevel()).toFixed(2);
+  switch (state) {
+    case 0:
+      background('red');
+      text("state0", 250, 250);
+      break;
 
-  fill("#33ccff");
-  rect(x,height/2,50,50);
+    case 1:
+      background('green');
+      text("state 1", 250, 250);
+      break;
 
-  //Setting the x value of the rect to add velocity value
-  x = x + velocity;
+    case 2:
+      background('blue');
+      text("state 2", 250, 250);
+      break;
 
-  //Movement
-  if (vol>.01) {
-    velocity = 7;
+    case 3:
+      background('white');
+      text("state3", 250, 250);
   }
-  else {
-    velocity = 0;
-  }
-
-  //looop
-  if (x > width) {
-    x = 0;
-  }
-
-  text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, width/2, 50);
 }
 
-function touchStarted() {
-  getAudioContext().resume();
+function mouseReleased() {
+  state++ ;
+  if (state > 3) {
+    state = 0;
+  }
 }
