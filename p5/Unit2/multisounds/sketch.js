@@ -2,16 +2,16 @@ let state = 0;
 let song1, song2, song3;
 
 function preload() {
-  song1 = loadSound("assets/(102)chopped and screwed v2 akira prod jackkk3x & tjdank .mp3");
+  song1 = loadSound("assets/(136)pisces prod jackkk3x & chris galaxy.mp3");
   song2 = loadSound("assets/(140)film prod jackkk3x & nadddot v2.mp3");
   song3 = loadSound("assets/(160)haunting the hill prod jackkk3x & chris galaxy.mp3");
 
-  // song1.loop();
-  // song1.pause();
-  // song2.loop();
-  // song2.pause();
-  // song3.loop();
-  // song3.pause();
+  //song1.loop();
+// song1.pause();
+ // song2.loop();
+ // song2.pause();
+ // song3.loop();
+ // song3.pause();
 }
 
 function setup() {
@@ -31,7 +31,7 @@ function draw() {
       break;
 
     case 1:
-      text("this is a beat i made with a friend that is internet money.", 100, 100);
+      text("this is a beat i made with a friend ", 100, 100);
       break;
 
     case 2:
