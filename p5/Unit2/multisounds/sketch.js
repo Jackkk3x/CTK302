@@ -2,7 +2,7 @@ let state = 0;
 let song1, song2, song3;
 
 function preload() {
-  song1 = loadSound("assets/(136)pisces prod jackkk3x & chris galaxy.mp3");
+  song1 = loadSound("assets/(136)pisces prod jackkk3x & batznasty.mp3");
   song2 = loadSound("assets/(140)film prod jackkk3x & nadddot v2.mp3");
   song3 = loadSound("assets/(160)haunting the hill prod jackkk3x & chris galaxy.mp3");
 
@@ -31,7 +31,7 @@ function draw() {
       break;
 
     case 1:
-      text("this is a beat i made with a friend ", 100, 100);
+      text("this is a beat i made with a friend i did the drums ", 100, 100);
       break;
 
     case 2:
