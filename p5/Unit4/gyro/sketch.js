@@ -59,7 +59,7 @@ function draw() {
   // Text that makes CTK type in the background
   fill('white');
   noStroke();
-  textSize(150);
+  textSize(50);
   textAlign(CENTER);
   text("home sweet home", width / 2, height / 2);
 
