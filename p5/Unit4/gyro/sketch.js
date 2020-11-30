@@ -1,5 +1,5 @@
 //For mobile phones - accesses accelerometer and gyroscope.
-//Make sure you turn on orientation lock on your iPhone or Android device. 
+//Make sure you turn on orientation lock on your iPhone or Android device.
 
 let alpha = 0, beta = 0 , gamma = 0; // gyroscope variables
 let x = 0.0, y = 0.0, z = 0.0 ; // accelerometer variables
@@ -59,9 +59,9 @@ function draw() {
   // Text that makes CTK type in the background
   fill('white');
   noStroke();
-  textSize(300);
+  textSize(150);
   textAlign(CENTER);
-  text("ctk", width / 2, height / 2);
+  text("home sweet home", width / 2, height / 2);
 
 }
 
