@@ -1,26 +1,42 @@
 let cars = [];
-let f1, f2, f3;
 let bg;
-let fonts = [];
 let maxCars = 5;
 let frogPos;
 let state = 0;
 let timer = 0;
+let musicnotesandflat;
+let song1;
+let hand;
+let fonts = [];
+
+
+function preload() {
+  song1 = loadSound("assets/(124)chickito prod jackkk3x & tj dank.mp3");
+  song1.loop();
+  song1.pause();
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  frogPos = createVector(width / 2, height / -80);
-  textAlign(CENTER);
-  rectMode(CENTER);
-
-
   f1 = loadFont("assets/KGChasingCars.ttf");
   f2 = loadFont("assets/rock.ttf");
   f3 = loadFont("assets/spaceage.ttf");
-  bg = loadImage("assets/fallPic.jpg");
+  hand = loadImage("assets/hand.jpg");
+  bg = loadImage("assets/musicnotes.jpg");
+  musicnotesandflats = loadImage("assets/musicnotesandflat");
 
   fonts = [f1, f2, f3];
+
+  frogPos = createVector(400 / 2, height / 100);
+  textAlign(CENTER);
+  imageMode(CENTER);
+  hand = loadImage("assets/hand.jpg");
+
+
+
+
+
 
   // Spawn 20 objects
   for (let i = 0; i < maxCars; i++) {
@@ -32,34 +48,39 @@ function setup() {
 function draw() {
   switch (state) {
     case 0:
-      background('grey');
-      text("Welcome to my game!", width / 2, height / 2);
+      background("orange");
+      text("Welcome to my game!");
+      textSize(20);
+      loadFont("assets/spaceage.ttf");
       break;
     case 1:
       game();
+
       timer++;
-      if(timer> 10*60){
-        state=3;
+      if (timer > 10 * 60) {
+        state = 3;
       }
       break;
 
     case 2:
       background('red')
       text("YAY YOUUU WONNNN!")
+      loadFont("assets/rock.ttf");
       textSize(20);
       break;
     case 3:
       background('purple');
       text('BOO YOU LOST')
+      loadFont("assets/KGChasingCars.ttf");
       textSize(20);
-  }
-      break;
 
+      break;
+  }
 }
 
 function game() {
   //background(100);
-  image(bg, 0, 0, width, height);
+  bg = loadImage("assets/musicnotes.jpg");
   // display and move 20 objects
   for (let i = 0; i < cars.length; i++) {
     cars[i].display();
@@ -73,8 +94,9 @@ function game() {
     state = 2;
   }
   //draw frog
-  fill('green');
-  ellipse(frogPos.x, frogPos.y, 50, 50);
+  //fill('green');
+  //ellipse(frogPos.x, frogPos.y, 50, 50);
+  image(hand, frogPos.x, frogPos.y);
   checkForKeys();
 }
 
@@ -104,13 +126,13 @@ function mouseReleased() {
     case 0:
       state = 1;
       break;
-    case 2: // they WONNNN
+    case 2: //they WONNNN
       state = 0;
       resetTheGame();
       break;
 
-    case 3: // they LOST
-    resetTheGame();
+    case 3: //  LOST
+      resetTheGame();
       state = 0
       break;
   }
@@ -131,7 +153,7 @@ class Car {
 
 
 
-    this.font = fonts[b];
+    this.image = musicnotesandflat[b];
   }
 
   // methods
@@ -139,10 +161,9 @@ class Car {
 
   display() {
     //rect(this.pos.x, this.pos.y, 50, 25);
-    fill(this.c);
-    textFont(this.font);
-    textSize(this.size);
-    text("vote", this.pos.x, this.pos.y);
+    //  fill(this.c);
+
+    image(musicnotesandflats, this.pos.x, this.pos.y);
   }
 
   move() {

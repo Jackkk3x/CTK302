@@ -10,6 +10,7 @@ f2= loadFont("assets/rock.ttf");
 f3= loadFont("assets/spaceage.ttf");
 bg= loadImage("assets/fallPic.jpg");
 
+
 fonts=[ f1,f2,f3];
 
   // Spawn 20 objects
