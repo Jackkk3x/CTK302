@@ -5,11 +5,11 @@ var x = 0;
 var windspeed = 0 ;
 var temperature = 0 ;
 var humidity = 0 ;
-
+var chicagoImage;
 
 function setup() {
   createCanvas(400, 400);
-
+  chicagoImage = loadImage("assets/chicago-2-c27abf49.jpg");
   // HERE is the call to get the weather.
 
   var myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Chicago,IL,US&units=imperial&';
@@ -47,6 +47,7 @@ function draw() {
 
     case 1:
       background(400);
+        image(chicagoImage, 0, 0, 500, 500)
       fill('black');
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("windspeed is " + windspeed, 20, 40);
