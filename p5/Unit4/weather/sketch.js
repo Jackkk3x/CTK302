@@ -50,7 +50,8 @@ function draw() {
       fill('black');
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("windspeed is " + windspeed, 20, 40);
-    text("temperature is " +  temperature, 20, 40);
+    text("temperature is " +  temperature, 20, 60);
+    text("humidity is " + humidity, 20, 80);
 
 
       // cloud
