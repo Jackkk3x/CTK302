@@ -46,7 +46,7 @@ function draw() {
       break;
 
     case 1:
-      background(200);
+      background(400);
       fill('black');
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("windspeed is " + windspeed, 20, 40);
