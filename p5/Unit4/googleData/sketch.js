@@ -3,7 +3,8 @@ var bubbles = [];
 function setup() {
 
   // Tabletop stuff, for getting google spreadsheet data in.
-  let url = '1GtE3eoYVWBv9zMPoyettXzDCEv6qdNGKio_hgEh5duM'; // this is KEY of the URL from the sheet
+  //let url = '1GtE3eoYVWBv9zMPoyettXzDCEv6qdNGKio_hgEh5duM'; // this is KEY of the URL from the sheet
+  let url = '1wmbXHHC3oBhASaiBRl2M53OFxPKIaoF7fqGhYlkZj9A';
   let settings = {
     key: url, // The url of the published google sheet
     callback: gotData, // A callback for when the data comes in
