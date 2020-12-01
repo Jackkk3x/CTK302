@@ -55,7 +55,7 @@ function draw() {
 
 
       // cloud
-      fill('white');
+      fill('green');
       noStroke();
       ellipse(x, 300, 200, 100);
 
