@@ -3,6 +3,8 @@ var weatherID = 0; // returned in the JSON weather element
 var myState = 0;
 var x = 0;
 var windspeed = 0 ;
+var temperature = 0 ;
+var humidity = 0 ;
 
 
 function setup() {
@@ -27,7 +29,9 @@ function gotData(data) {
 
   weather = data;
   console.log(weather); // for debugging purposes, print out the JSON data when we get it.
-  windspeed = weather.wind.speed;
+  windspeed = weather.wind.speed ;
+  temperature = weather.main.temp ;
+  humidity = weather.main.humidity ;
 
 
 }
@@ -46,6 +50,7 @@ function draw() {
       fill('black');
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("windspeed is " + windspeed, 20, 40);
+    text("temperature is " +  temperature, 20, 40);
 
 
       // cloud
