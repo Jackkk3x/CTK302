@@ -78,7 +78,7 @@ image(streetImage, 0, 0, 500, 500);
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  text("whatever you do don't shake the screen", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("welcome to the quantum realm", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
