@@ -1,7 +1,7 @@
 var bubbles = [];
-
+var XgamesImage;
 function setup() {
-
+  XgamesImage = loadImage("assets/Xgames.jpg");
   // Tabletop stuff, for getting google spreadsheet data in.
   //let url = '1GtE3eoYVWBv9zMPoyettXzDCEv6qdNGKio_hgEh5duM'; // this is KEY of the URL from the sheet
   let url = '1wmbXHHC3oBhASaiBRl2M53OFxPKIaoF7fqGhYlkZj9A';
@@ -39,6 +39,7 @@ function gotData(data) {
 
 function draw() {
   background('blue');
+    image(XgamesImage, 0, 0, 500, 500);
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
