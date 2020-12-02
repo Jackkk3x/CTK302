@@ -38,7 +38,7 @@ function gotData(data) {
 
 
 function draw() {
-  background('blue');
+  
     image(XgamesImage, 0, 0, 500, 500);
 
   // // iterate through the bubbles and display the objects!
